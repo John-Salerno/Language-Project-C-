@@ -1,0 +1,45 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "cl.exe build active file",
+			"command": "cl.exe",
+			"args": [
+				"/Zi",
+				"/EHsc",
+				"/Fe:",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe",
+				"${file}"
+			],
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"type": "shell",
+			"label": "shell: g++.exe build active file",
+			"command": "C:\\MinGW\\bin\\g++.exe",
+			"args": [
+				"-g",
+				"${fileDirname}\\io.cpp",
+				"${fileDirname}\\lex.cpp",
+				"${fileDirname}\\main.cpp",
+				"${fileDirname}\\parse.cpp",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "C:\\MinGW\\bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+  }

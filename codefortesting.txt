@@ -1,0 +1,5 @@
+x=30;
+y=20;
+z=x*y;
+print z;
+repeat 5 begin println "hello" end;
